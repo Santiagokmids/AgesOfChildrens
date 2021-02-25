@@ -75,7 +75,7 @@ public class Main {
 		average = (int)average;
 		average = average/100;
 		
-		message = average+" - ";
+		message = average+"-";
 		
 		for (int j = 0; j < ages.size(); j++) {
 			
