@@ -39,11 +39,11 @@ public class Main {
 						ages.add(agesChildrens);
 					}
 					
-					bw.write("\n"+bubbleSort(ages));	
-				}
+					bw.write(bubbleSort(ages));
+				}	
+				br.close();
+				bw.close();
 			}
-			br.close();
-			bw.close();
 
 		} catch (NumberFormatException nfe) {
 			System.out.println("\nPlease enter numbers");	
@@ -69,8 +69,13 @@ public class Main {
 			}
 			iterations++;
 		}
-		Double average = (exchanges/iterations);
-		message = String.format("%.3f", average)+" - ";
+		double average = (exchanges/iterations);
+		
+		average = average * 100.0;
+		average = (int)average;
+		average = average/100;
+		
+		message = average+" - ";
 		
 		for (int j = 0; j < ages.size(); j++) {
 			
